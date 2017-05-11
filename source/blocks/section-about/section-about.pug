@@ -27,16 +27,5 @@ section.section-about
         | Чем я могу быть вам полезен
       .about-right__description
         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-      ul.about-right__skills
-        each skill in skills
-          .skills
-            .skill__title= skill.title
-            ul.skill__list
-              each list in skill.list
-                li.skill__list-item
-                  svg(viewBox='0 0 110 110').circles
-                    circle(r="45" cx="50%" cy="50%" fill="none").circle__first
-                    circle(class=`circle-${list.percent}` r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)").circle__second
-                  .skill__name= list.name
-
-
+      .about-right__skills
+        include ../skills/skills
