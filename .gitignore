@@ -37,3 +37,9 @@ build
 # Node.JS
 node_modules
 npm-debug.log
+!/conf/server.nginx
+bin/
+source/fonts/
+source/sprite/
+/conf/server.nginx
+/api.js

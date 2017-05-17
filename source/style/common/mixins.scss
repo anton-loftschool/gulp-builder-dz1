@@ -50,3 +50,9 @@
     @content
   }
 }
+
+@mixin breakpoint($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content
+  }
+}

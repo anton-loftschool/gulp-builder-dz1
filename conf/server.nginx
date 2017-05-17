@@ -1,0 +1,74 @@
+server {
+
+    # порт, который будем слушать
+    listen 80;
+
+    # без этой директивы не найдет конфигурацию этого Virtual Host
+    # собственно сопоставляет значение с заголовком Host, который отдает клиент
+    # на бою надо поправить на доменное имя
+    server_name localhost;
+
+    # корневая директория
+    # пример для windows: root E:/Temp/forest/build;
+    root /home/ubuntu/forest/build;
+
+    # пока пишем отключаем возможность использования кэша на стороне клиента
+    etag off;
+    if_modified_since off;
+
+    # пример назначения ответа на код 404
+    error_page 404 = @404.json;
+
+    # пример ответа 404 в формате JSON
+    location @404.json {
+        default_type application/json;
+        return 404 '{"error":{"name":"ProxyError","message":"Page not found."}}';
+    }
+
+    # раздаем статику
+    location /assets {
+        # отключаем логи для статики, чтобы не мешались
+        access_log off;
+        # если файла нет, то возвращаем 404
+        try_files $uri =404;
+    }
+
+    # страница по умолчанию
+    index welcome.html;
+
+    # остальные страницы
+    location ~ \.html$ {
+        try_files $uri =404;
+    }
+
+    # отдельно отрабатываем запрос к favicon.ico
+    location = /favicon.ico {
+        access_log off;
+        try_files /favicon.ico @empty_gif;
+    }
+
+    location @empty_gif {
+        # создаем картинку 1x1
+        empty_gif;
+    }
+
+    # проксируем запросы к ноде
+    location /api {
+
+        # адрес и порт на котором будет работать нода
+        proxy_pass http://localhost:3000/api;
+
+        # немного необязательных настроек
+
+        # таймаут на подключение к ноде
+        proxy_connect_timeout 5;
+
+        # стандартные заголовки, который как правило подставляет обратный прокси
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-NginX-Proxy true;
+
+    }
+
+}

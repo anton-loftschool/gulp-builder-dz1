@@ -31,18 +31,22 @@
   opacity: 0.1
 
 .fman
-  padding-top: 240px
+  padding-top: 300px
   display: flex
   flex-direction: row
   flex-wrap: nowrap
   justify-content: center
   align-items: stretch
   align-content: stretch
+  @include breakpoint(640px)
+    flex-direction: column
 
 .fman__item
-  width: 400px
+  width: 320px
   text-align: center
   position: relative
+  margin: 0 auto
+  margin-top: 50px
 
 .fman-item__photo
   margin-bottom: 20px
