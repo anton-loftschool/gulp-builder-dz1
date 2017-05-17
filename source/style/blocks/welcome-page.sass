@@ -1,8 +1,8 @@
 .welcome-page
-  height: 100%
-  width: 100%
+  min-height: 100vh
   display: flex
-  justify-content: center
+  flex-direction: column
+  justify-content: space-between
   align-items: center
 
 .welcome-page--bg-image
@@ -13,15 +13,19 @@
   //background-position: center center
 
 .welcome-page__login-button
-  position: absolute
-  top: 24px
-  right: 158px
-
+  z-index: 1
+  text-align: right
+  width: 100%
+  margin-top: 24px
+  margin-bottom: 24px
+  margin-right: 158px
+  @include tablet
+    text-align: center
+    margin-right: 0
 
 .welcome-page__copyright-text
-  position: absolute
-  bottom: 40px
-  width: 100%
+  z-index: 1
+  margin: 40px 20px
   text-align: center
 
 .welcome-page__user-block
