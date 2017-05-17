@@ -4,6 +4,9 @@ $footer-copyright-height: 38px
   height: $footer-copyright-height
   margin-top: -$footer-copyright-height
   background-color: rgba(112, 158, 95, 0.85)
+  @include breakpoint(400px)
+    height: $footer-copyright-height + 20px
+    margin-top: -$footer-copyright-height - 20px
 
 .footer-copyright__text
   line-height: $footer-copyright-height

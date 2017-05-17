@@ -29,6 +29,16 @@ body {
 	overflow: hidden;
 }
 
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
 ul {
 	padding: 0;
 	margin: 0;
