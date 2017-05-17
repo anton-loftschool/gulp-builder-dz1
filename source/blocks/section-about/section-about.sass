@@ -1,17 +1,34 @@
+.triangle--section-about
+  @include breakpoint(1000px)
+    fill: #eeebdf !important
+
 .section-about
-  @extend %clearfix
-  background-color: #eeebdf
+  margin-top: 1px // hack
+  display: flex
+  flex-direction: row
+  @include breakpoint(1000px)
+    flex-direction: column
 
 .section-about__left, .section-about__right
-  float: left
   width: 50%
-  position: relative
+  @include breakpoint(1000px)
+    width: 100%
 
 .section-about__left
   background: $beige
+  display: flex
+  flex-direction: row
+  @include breakpoint(1600px)
+    flex-direction: column
+  @include breakpoint(1000px)
+    padding-top: 20px
+    padding-bottom: 50px
 
 .section-about__right
   background: $white
+  @include breakpoint(1000px)
+    padding-top: 10px
+    text-align: center
 
 .section-about__triangles
   position: absolute
@@ -24,11 +41,14 @@
   height: 100%
 
 .about-left__title
-  flex: 1
+  width: 50%
   text-align: center
+  @include breakpoint(1600px)
+    width: 100%
 
 .about-left__title-text
   margin-top: -87px
+  padding-bottom: 50px
 
 .about-left__title-header
   img
@@ -36,7 +56,9 @@
     width: 360px
 
 .about-left__info
-  flex: 1
+  width: 50%
+  @include breakpoint(1600px)
+    width: 100%
 
 .about-left__photo
   -moz-transform: scaleX(-1)
@@ -45,8 +67,17 @@
   transform: scaleX(-1)
   filter: FlipH
   -ms-filter: "FlipH"
+  text-align: center
+  img
+    padding: 20px
+    max-width: 100%
+    @include phone
+      padding: 20px 0
 
 .about-me__info-content
+  margin: 20px
+  @include phone
+    text-align: center
 
 .about-me__subtitle
   text-align: center
@@ -59,12 +90,12 @@
   margin-bottom: 20px
 
 .about-right
-  margin: 10px 0 20px 40px
+  margin: 10px 20px
 
 .about-right__title
   text-align: center
   width: 280px
-  margin: 0 auto
+  margin: 40px auto
 
 .about-right__description
   position: relative

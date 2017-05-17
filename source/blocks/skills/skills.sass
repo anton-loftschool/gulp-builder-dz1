@@ -9,6 +9,9 @@
 .skill__list
   display: flex
   flex-wrap: wrap
+  justify-content: left
+  @include breakpoint(1000px)
+    justify-content: center
 
 .circles
   fill: none
@@ -30,17 +33,14 @@
   display: inline-block
   width: 120px
   height: 120px
-  margin-right: 40px
+  margin: 20px
   text-align: center
-  margin-bottom: 20px
   &::after
     content: ''
     display: inline-block
     height: 100%
     vertical-align: middle
     width: 0
-  &:last-child
-    margin-right: 0
 
 .skill__name
   position: relative
