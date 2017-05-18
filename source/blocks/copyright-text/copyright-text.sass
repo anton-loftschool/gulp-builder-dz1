@@ -1,2 +1,18 @@
 .copyright-text
   color: #fff
+  line-height: 1.42
+
+.copyright-text__name
+  display: inline-block
+  &::after
+    content: " | "
+  @include breakpoint(400px)
+    padding-top: 7px
+    display: block
+    &::after
+      content: ""
+
+.copyright-text__love
+  display: inline-block
+  @include breakpoint(400px)
+    display: block

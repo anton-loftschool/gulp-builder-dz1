@@ -32,3 +32,27 @@
   -ms-border-radius: $radius;
   -moz-border-radius: $radius;
 }
+
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+}
+
+@mixin breakpoint($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content
+  }
+}

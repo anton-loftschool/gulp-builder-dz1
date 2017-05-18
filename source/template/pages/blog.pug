@@ -4,12 +4,11 @@ block title
   | Блог | #{author.name}
 
 block content
-  .page-blog.wrapper
-    .page-blog__section-hero-blog
-      include ../../blocks/section-hero-blog/section-hero-blog
-    .page-blog__section-blog
-      include ../../blocks/section-blog/section-blog
-    .page-blog__empty
-
-block footer
-  include ../../blocks/page-footer/page-footer
+  .page.wrapper
+    .page-wrapper
+      .page-blog__section-hero-blog
+        include ../../blocks/section-hero-blog/section-hero-blog
+      .page-blog__section-blog
+        include ../../blocks/section-blog/section-blog
+      .page-blog__empty
+    include ../../blocks/page-footer/page-footer

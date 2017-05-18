@@ -1,24 +1,20 @@
 .section-blog
-  @extend %clearfix
   background-color: #faf8f0
   height: 100%
-
-.section-blog__left, .section-blog__right
-  float: left
-  width: 50%
-  position: relative
-  margin-top: -150px
-  fill: #faf8f0
+  margin-top: 1px
 
 .section-blog__triangle
   fill: #faf8f0
 
 .section-blog__container
-  padding-top: 70px
+  padding-top: 50px
+  display: flex
+  flex-direction: row
 
 .section-blog__menu
-  float: left
   width: 25%
+  @include breakpoint(1000px)
+    display: none
 
 .articles-menu
   text-align: right
@@ -26,7 +22,7 @@
 .articles-menu__item
   display: inline-block
   padding: 13px
-  margin-left: 100px
+  margin-left: 40px
   margin-bottom: 5px
   border-right: 3px solid #faf8f0
   &:hover
@@ -34,6 +30,8 @@
     font-weight: 500
     a
       color: $green
+  @include desktop
+    margin-left: 20px
 
 .articles-menu__item--active
   border-right: 3px solid $green
@@ -46,19 +44,24 @@
   color: #455a64
 
 .section-blog__articles
-  padding-left: 120px
-  float: left
+  padding: 0 20% 0 100px
   width: 75%
+  @include desktop
+    padding-left: 50px
+    padding-right: 10%
+  @include breakpoint(1000px)
+    padding: 0 30px
+    width: 100%
 
 .articles
-  width: 980px
+  width: 100%
 
 .article
   margin-bottom: 70px
   &::after
     content: ""
     display: block
-    width: 680px
+    width: 50%
     height: 3px
     background-color: #ecebe4
     margin-top: 70px
@@ -77,8 +80,9 @@
   margin-bottom: 20px
 
 .article__content
-  width: 880px
+  width: 100%
   color: #455a64
   line-height: 29px
   p
     margin-bottom: 15px
+    width: 100%

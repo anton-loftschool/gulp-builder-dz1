@@ -1,11 +1,17 @@
 $white80: rgba(#ffffff, 0.8)
 
 .login
-  width: 380px
+  width: 100%
+  height: 100%
   background-color: rgba(18, 38, 32, 0.6)
   text-align: center
   color: #fff
   @include border-radius(10px)
+  transform: rotateY(180deg)
+  position: absolute
+  top: 0
+  left: 0
+  backface-visibility: hidden
 
 .login__title
   padding-top: 35px

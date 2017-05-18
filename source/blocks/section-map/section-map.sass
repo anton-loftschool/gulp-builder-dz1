@@ -2,10 +2,27 @@
   position: relative
   height: 1124px
   width: 100%
+  @include phone
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 
 .section-map--bg-image
   background: url("../img/section-map/map.jpg") no-repeat center center
   background-size: cover
 
+.section-map__contacts-up
+  display: none
+  @include phone
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: stretch
+    align-content: stretch
+    background-color: #f4f5f0
+
 .section-map__contacts
   @include centered()
+  @include phone
+    display: none

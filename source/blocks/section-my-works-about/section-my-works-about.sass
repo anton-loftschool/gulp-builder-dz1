@@ -1,7 +1,11 @@
 .section-my-works-about
   position: relative
-  height: 1400px
+  height: 1500px
   width: 100%
+  @include breakpoint(950px)
+    height: 1650px
+  @include breakpoint(650px)
+    height: 2130px
 
 .leaf-1
   position: absolute
@@ -31,18 +35,22 @@
   opacity: 0.1
 
 .fman
-  padding-top: 240px
+  padding-top: 300px
   display: flex
   flex-direction: row
   flex-wrap: nowrap
   justify-content: center
   align-items: stretch
   align-content: stretch
+  @include breakpoint(640px)
+    flex-direction: column
 
 .fman__item
-  width: 400px
+  width: 320px
   text-align: center
   position: relative
+  margin: 0 auto
+  margin-top: 50px
 
 .fman-item__photo
   margin-bottom: 20px
@@ -60,7 +68,7 @@
   position: relative
 
 .fman-item__name
-  margin: 25px 0px 10px
+  margin: 25px 0 10px
   font-weight: 500
   color: $dark-green
 
