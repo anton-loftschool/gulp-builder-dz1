@@ -27,16 +27,22 @@
 .section-hero-blog__user-photo
   width: 141px
   margin: 0 auto
+  @include tablet
+    margin-bottom: 10px
 
 .section-hero-blog__blog-header
   opacity: 0.12
   margin-bottom: -155px
   margin-top: -35px
+  @include tablet
+    display: none
 
 .section-hero-blog__title
   margin-bottom: 40px
 
 .section-hero-blog__info
+  text-align: center
   color: #fff
   bottom: 60px
   @include centered(x)
+
