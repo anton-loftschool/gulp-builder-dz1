@@ -44,19 +44,14 @@ section.section-my-works-about.section-my-works-about--bg-image
           | Связаться со мной
       form.feedback-form
         .feedback-form__input-wrapper
-          input.feedback-form__input(id="feedback-name" type="text", name="feedback-name" , placeholder="Имя")
+          input.feedback-form__input(id="feedback-name" type="text" name="feedback-name" required=true placeholder="Имя")
           label.feedback-form__input-label(for="feedback-name")
         .feedback-form__input-wrapper
-          input.feedback-form__input(id="feedback-email" type="text", name="feedback-email", placeholder="Email")
+          input.feedback-form__input(id="feedback-email" type="text" name="feedback-email" required=true placeholder="Email")
           label.feedback-form__input-label(for="feedback-email")
         .feedback-form__input-wrapper
-          textarea.feedback-form__textarea(id="feedback-message" rows="6", name="feedback-message", placeholder="Ваше сообщение")
+          textarea.feedback-form__textarea(id="feedback-message" rows="6" name="feedback-message" required=true placeholder="Ваше сообщение")
           label.feedback-form__input-label(for="feedback-message")
-      nav.feedback-menu
-        ul.feedback-menu__list
-          li.feedback-menu__item
-            a(href="/").feedback-menu__link
-              | Отправить
-          li.feedback-menu__item
-            a(href="/").feedback-menu__link
-              | Очистить
+        .feedback__menu
+            button(type="submit").feedback__button Отправить
+            button(type="reset").feedback__button Очистить

@@ -129,26 +129,24 @@
     + .login-form__input-label
       fill: $dark-green
 
-.feedback-menu__list
+.feedback__menu
   display: flex
-  li:first-child
+  button:first-child
     border-radius: 0 0 0 10px
     border: 0
     border-right: 2px
     border-style: solid
     border-color: rgba(222, 227, 231, 0.5)
-  li:last-child
+  button:last-child
+    border: none
     border-radius: 0 0 10px 0
 
-.feedback-menu__item
+.feedback__button
   background-color: rgba($green, 0.8)
   font-weight: 500
   flex: 1
   padding: 16px 0 18px
+  color: #fff
   &:hover
     background-color: rgba($dark-green, 0.9)
     cursor: pointer
-
-.feedback-menu__link
-  color: #fff
-  text-decoration: none

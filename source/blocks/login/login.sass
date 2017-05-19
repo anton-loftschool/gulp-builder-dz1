@@ -137,18 +137,20 @@ $white80: rgba(#ffffff, 0.8)
 .login-form__user-radio:checked + .login-form__user-radio-label
   color: $green
 
-.login-menu__list
+.login__menu
   display: flex
-  li:first-child
+  a
     border-radius: 0 0 0 10px
     border: 0
     border-right: 2px
     border-style: solid
     border-color: rgba(222, 227, 231, 0.5)
-  li:last-child
+  button
     border-radius: 0 0 10px 0
 
-.login-menu__item
+.login__link
+  color: #fff
+  text-decoration: none
   background-color: #6c9c5a
   font-weight: 500
   flex: 1
@@ -157,6 +159,23 @@ $white80: rgba(#ffffff, 0.8)
     background-color: $dark-green
     cursor: pointer
 
-.login-menu__link
+.login__button
+  background-color: #6c9c5a
+  font-weight: 500
+  flex: 1
+  padding: 16px 0 18px
   color: #fff
-  text-decoration: none
+  border: 0
+  border-left: 1px
+  border-style: solid
+  border-color: rgba(222, 227, 231, 0.5)
+  &:hover
+    background-color: $dark-green
+    cursor: pointer
+
+input.invalid
+  border: 2px solid #FF5252
+
+p.invalid
+  border: none
+  color: #FF5252

@@ -8,5 +8,6 @@ module.exports = [
   './source/blocks/hamburger/hamburger.js',
   './source/blocks/spinner/spinner.js',
   './source/blocks/sidebar/sidebar-hide.js',
-  './source/blocks/sidebar/sidebar-marker.js'
+  './source/blocks/sidebar/sidebar-marker.js',
+  './source/blocks/validation/validation.js',
 ];
