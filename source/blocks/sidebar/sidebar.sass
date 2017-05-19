@@ -1,0 +1,83 @@
+.sidebar
+  position: relative
+  width: 30%
+  text-align: right
+  transition: left 0.8s ease
+  float: left
+  padding-top: 80px
+  padding-right: 40px
+  @include breakpoint(1000px)
+    width: 50%
+    height: 100%
+    position: fixed
+    top: 0
+    left: -50%
+    background: #6c9c5a
+    z-index: 200
+    &::after
+      content: ''
+      position: absolute
+      background: #6c9c5a
+      width: 50px
+      height: 50px
+      right: -20px
+      top: 50%
+      margin-top: -25px
+      border-radius: 50%
+      transition: right 0.5s ease
+      cursor: pointer
+
+.sidebar.active
+  @include breakpoint(1000px)
+    left: 0
+
+.sidebar.fixed
+  position: fixed
+  top: 0
+  padding-right: 40px
+
+.sidebar__item
+  cursor: pointer
+  display: inline-block
+  padding: 13px
+  margin-left: 40px
+  margin-bottom: 5px
+  border-right: 3px solid #faf8f0
+  &:hover
+    border-right: 3px solid $green
+    font-weight: 500
+    a
+      color: $green
+  @include desktop
+    margin-left: 20px
+  @include breakpoint(1000px)
+    border-right: none
+    a
+      color: #fff
+      opacity: 0.7
+    &:hover
+      a
+        color: #fff
+        opacity: 1
+
+.sidebar__item.active
+  border-right: 3px solid $green
+  font-weight: 500
+  a
+    color: $green
+  @include breakpoint(1000px)
+    font-weight: 500
+    a
+      color: #fff
+      opacity: 1
+
+.sidebar__link
+  text-decoration: none
+  color: #455a64
+
+.section-blog__articles.fixed
+  margin-left: 30%
+  padding-left: 0
+  @include breakpoint(1000px)
+    margin-left: 0
+    padding: 0 30px
