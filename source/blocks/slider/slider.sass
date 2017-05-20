@@ -30,6 +30,26 @@
   margin-top: 52px
   color: $green
   font-weight: 500
+  text-transform: uppercase
+
+.my-works-desc__link
+  margin-top: 40px
+  border-radius: 23px
+  background-color: $green
+  width: 200px
+  line-height: 42px
+  height: 45px
+  color: #fff
+  font-family: "Roboto", Arial, sans-serif
+  font-weight: 500
+  border: 1px solid $green
+  text-decoration: none
+  i
+    padding-right: 10px
+  &:hover
+    background-color: $dark-green
+    border: 1px solid $dark-green
+    cursor: pointer
 
 .carousel-preview
   -webkit-box-flex: 4
@@ -62,25 +82,34 @@
 .carousel-arrows__item-fon-left, .carousel-arrows__item-fon-right
   height: 100%
   width: 100%
+  cursor: pointer
 
 .carousel-arrows__item-fon-left
   background-color: rgba(195, 189, 174, 0.7)
+  &:hover
+    background-color: rgba(195, 189, 174, 0.5)
 
 .carousel-arrows__item-fon-right
   background-color: rgba(141, 131, 103, 0.5)
+  &:hover
+    background-color: rgba(141, 131, 103, 0.3)
 
 .carousel-arrows--center
   @include centered("both")
   width: 50px
 
 .carousel-arrows__down
-  background: url("../img/section-my-works/project-1.png") no-repeat center center
+  background-image: url("../img/section-my-works/project-1.png");
+  background-repeat: no-repeat
+  background-position: center center
   background-size: cover
   height: 100%
   width: 100%
 
 .carousel-arrows__up
-  background: url("../img/section-my-works/project-3.png") no-repeat center center
+  background-image: url("../img/section-my-works/project-3.png");
+  background-repeat: no-repeat
+  background-position: center center
   background-size: cover
   height: 100%
   width: 100%

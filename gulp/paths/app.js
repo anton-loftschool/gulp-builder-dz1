@@ -10,4 +10,5 @@ module.exports = [
   './source/blocks/sidebar/sidebar-hide.js',
   './source/blocks/sidebar/sidebar-marker.js',
   './source/blocks/validation/validation.js',
+  './source/blocks/slider/slider.js'
 ];
