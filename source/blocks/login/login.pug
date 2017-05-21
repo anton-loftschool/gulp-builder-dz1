@@ -2,13 +2,13 @@
   .login__title
     .subtitle.subtitle--white
       | Авторизуйтесь
-  form.login-form
+  form(action='login' method="POST").login-form
     .login-form__input-wrapper
-      input.login-form__input(id="user-login-name" type="text" name="user-login-name" placeholder="Логин")
+      input.login-form__input(id="user-login-name" type="text" name="login" placeholder="Логин")
       label.login-form__input-label(for="user-login-name").login-form__icon
         i.fa.fa-user
     .login-form__input-wrapper
-      input.login-form__input(id="user-password" type="password" name="user-password" placeholder="Пароль")
+      input.login-form__input(id="user-password" type="password" name="password" placeholder="Пароль")
       label.login-form__input-label(for="user-password").login-form__icon
         i.fa.fa-key
     .login-form__user-check-wrapper

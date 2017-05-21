@@ -73,7 +73,7 @@
       ]
     }
   ],
-  "articles": [
+  "_articles": [
     {
       "title": "Самое важное в SASS",
       "created_at": "22 ноября 2016",

@@ -38,9 +38,31 @@
         }
 
         if (valid) {
-            console.log('.login-form submitted');
+            //console.log('.login-form submitted');
+            let loginFormData = loginForm.serialize();
+
+            let result = $.ajax({
+                url: '/login',
+                type: 'POST',
+                data: loginFormData,
+                dataType: 'json'
+            });
+
+            //alert(result);
+            //console.log(result);
+
+            result.done(function(answer) {
+                if(answer.status === 'Авторизация успешна!') {
+                    window.location = '/admin';
+                }else{
+                    alert(answer.status);
+                }
+            });
+            result.fail(function(answer) {
+                alert(answer);
+            });
         } else {
-            //
+            // invalid
         }
 
         return false;

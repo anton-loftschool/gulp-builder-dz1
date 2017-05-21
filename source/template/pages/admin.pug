@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+
+    title
+      | Admin
+
+    meta(content="" name="author")
+    meta(content="" name="description")
+    meta(content="" name="keywords")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+    //- favicon block start
+    link(rel="shortcut icon" href="assets/img/favicon.png")
+    //- favicon block end
+
+    link(rel='stylesheet' href='/assets/css/foundation.css')
+    link(rel='stylesheet' href='/assets/css/app.css')
+    script(src='/assets/js/foundation.js' defer)
+    script(src='/assets/js/app.js' defer)
+
+    <!--[if lt IE 9]>
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+    <![endif]-->
+
+  body
+
+    .row
+      //.col
+      //  .form-container
+      //    form.form#upload(action='/upload' method="POST" enctype="multipart/form-data")
+      //        .form__subtitle Загрузите картинку на сервер
+      //        .status
+      //        label.form__input-line
+      //            input(name="name" type="text" placeholder="Описание картинки").form__input#file-desc
+      //        label.form__input-line
+      //            input(name="photo" type="file" required accept="image/*").form__input#file-select
+      //        .form__btns.form__input-line
+      //            input(name="" type="submit" value="Отправить").form__btn-send
+      //            input(name="" type="reset" value="Очистить").form__btn-reset
+      .col
+        .form-container
+          form.form#blog
+              .form__subtitle Добавить запись в блог
+              .status
+              label.form__input-line
+                  input(name="title" type="text" placeholder="Заголовок").form__input
+              label.form__input-line
+                  -
+                      var data = new Date().toLocaleDateString('ru', {
+                                  year: 'numeric',
+                                  month: '2-digit',
+                                  day: '2-digit'
+                                  })
+                  input(name="date" type="date" value=`${data}`).form__input
+              textarea(placeholder="Ваша запись" name="text").form__textarea
+              .form__btns.form__input-line
+                  input(name="" type="submit" value="Отправить").form__btn-send
+                  input(name="" type="reset" value="Очистить").form__btn-reset

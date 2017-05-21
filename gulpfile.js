@@ -37,6 +37,9 @@ $.gulp.task('default', $.gulp.series(
     'sprite:png'
   ),
   $.gulp.parallel(
+      'nodemon'
+  ),
+  $.gulp.parallel(
     'watch',
     'serve'
   )

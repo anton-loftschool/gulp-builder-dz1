@@ -10,13 +10,13 @@ section.section-blog
     //.blog__sidebar
     .sidebar
       ul.sidebar__list
-        each article, ndx in articles
+        each article, ndx in items
           li.sidebar__item
             a(href=`#article-${ndx}`).sidebar__link= article.title
     .section-blog__articles
       .articles
-        each article, ndx in articles
+        each article, ndx in items
           article(id=`article-${ndx}`).article
             .article__title= article.title
-            .article__created-at= article.created_at
-            .article__content= article.content
+            .article__created-at= article.date
+            .article__content= article.body
